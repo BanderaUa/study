@@ -12,18 +12,29 @@ def func_1(x):
     s = collections.Counter(d)
     return s
 
+def func_dict_from_x(x):
+    return {letter: x.count(letter) for letter in x}
 
 
-def func_2(*args):
-    d = list(args)
-    for i in d:
-        return
+def get_max_str(listed_strings, no_letters=''):
+    if not listed_strings:
+        return no_letters
+
+    max_str = listed_strings[0]
+
+    for x in listed_strings:
+        if len(x) > len(max_str):
+            max_str = x
+
+    return max_str
 
 
-func_2('abc','c','abcd','ab')
+print(get_max_str(['alice','bob','felixlll','johny']))
 
 
-def func_3(k,*args):
-    x = k.join(args)
-    return x
 
+def make_the_string(a,sign):
+    result = sign.join(a)
+    return result
+
+print(make_the_string(a = "abc",sign="|"))
