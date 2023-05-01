@@ -12,6 +12,7 @@ def func_1(x):
     s = collections.Counter(d)
     return s
 
+
 def func_dict_from_x(x):
     return {letter: x.count(letter) for letter in x}
 
@@ -29,12 +30,17 @@ def get_max_str(listed_strings, no_letters=''):
     return max_str
 
 
-print(get_max_str(['alice','bob','felixlll','johny']))
-
-
-
-def make_the_string(a,sign):
+def make_the_string(a, sign):
     result = sign.join(a)
     return result
 
-print(make_the_string(a = "abc",sign="|"))
+
+
+
+
+def asfasf():
+    a = ['c','b','d','a','e','f']
+    return a.s()
+
+
+print(asfasf())
